@@ -31,7 +31,7 @@ const NewHome: React.FC = () => {
     setTimeout(() => {
       getPokemons().then((pokemons) => {
         setAllPokemons(pokemons);
-        setRenderPokemons(pokemons.slice(0, 13));
+        setRenderPokemons(pokemons.slice(0, 30));
         setCurrentPage(2);
       });
       event.detail.complete();
@@ -40,10 +40,10 @@ const NewHome: React.FC = () => {
 
   const addPokemons = () => {
     if (allPokemons.length > renderPokemons.length) {
-      const pokemonPerPage = 13;
+      const pokemonPerPage = 30;
       let indexOfLastPokemon = currentPage * pokemonPerPage;
       let indexOfFirstPokemon = indexOfLastPokemon - pokemonPerPage;
-      if (indexOfFirstPokemon + 13 > allPokemons.length) {
+      if (indexOfFirstPokemon + 30 > allPokemons.length) {
         indexOfLastPokemon = allPokemons.length;
       }
       const pokemonsToAdd: InterfacePokemon[] = allPokemons.slice(
@@ -58,7 +58,7 @@ const NewHome: React.FC = () => {
   useEffect(() => {
     getPokemons().then((pokemons) => {
       setAllPokemons(pokemons);
-      setRenderPokemons(pokemons.slice(0, 13));
+      setRenderPokemons(pokemons.slice(0, 30));
       setCurrentPage(currentPage + 1);
     });
   }, []);
@@ -93,7 +93,7 @@ const NewHome: React.FC = () => {
               <IonInfiniteScroll
                 onIonInfinite={(ev) => {
                   addPokemons();
-                  setTimeout(() => ev.target.complete(), 1000);
+                  setTimeout(() => ev.target.complete(), 3000);
                 }}
               >
                 <IonInfiniteScrollContent loadingText="Loading more data..."></IonInfiniteScrollContent>
