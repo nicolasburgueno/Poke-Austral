@@ -1,0 +1,32 @@
+ion-grid {
+  --ion-grid-width: 90%;
+  --ion-grid-column-padding: 0rem;
+}
+
+ion-col {
+  margin-top: 1rem;
+}
+
+ion-spinner {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+
+.custom-header {
+  backdrop-filter: blur(8px);
+  --background: rgba(14, 20, 40, 0.5);
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+ion-title {
+  color: white;
+}
+
+ion-content {
+  --background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjG1yTMT4KXqMA0SUOSEt0uCAUXWx7chIlpjvGuc0A_Mv85bivV7gVS7GWw2hhahY8X8l_fkqZLl0EnanQEetr68twUY_C9P5y7x-7TFsdSV-X_hnjyM4Tl_-7kdDbMtK2jTMsj0RRlVAo6n_oZuJMm0nxGgSHFtSdHiXOAynKfBImjMQHk31aOA9K67A/s1920/cute-real-pokemons-1920x1080.jpg")
+    no-repeat fixed center / cover !important;
+}
